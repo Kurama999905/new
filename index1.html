@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <form action="walidacja.php" method="POST" enctype="multipart/form-data">
+    <label for="tekst">Nazwa pliku:</label><br/>
+    <input type="text"id="tekst" name="tekst" minlength="3" required><br/>
+    <label for="plik">Pole wyboru pliku:</label><br/>
+    <input type="file" id="plik" name="plik" accept=".png, .jpeg"><br/>
+    <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
