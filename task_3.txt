@@ -1,5 +1,0 @@
-
-author_name	sold_sum	
-author_702  11585264
-author_3     9247305
-author_87    7383256
