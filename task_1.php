@@ -4,7 +4,7 @@ $lista_2 = array('MaRia','olIwia', 'SofIA', 'Ela', 'DORota','Ala', 'Ela', 'Oliwi
 $lista_3 = array('jakub');
 $lista_4 = array('marian');
 $lista_5 = array('MiKoŁaJ');
-function unique_names(){
+function unique_names($listy){
     $listy = func_get_args();
     $wynik = array();
     foreach ($listy as $lista){
