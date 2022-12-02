@@ -17,6 +17,10 @@
             border-collapse: collapse;
         }
         div {text-align: center;}
+        body {background-color:grey;}
+        button {
+            cursor: pointer;
+        }
         </style>
 </head>
 <body>
@@ -49,18 +53,18 @@
           echo <<<END
             <tr>
               <td>$plik</td>
-              <td>
-                <img src='$sciezka_do_pliku' alt='Miniaturka' width='50' height='50'>
+              <td >
+                <img src='$sciezka_do_pliku' alt='Miniaturka' width='5%' height='5%'>
               </td>
               <td>
                 <dialog class='modal' id='$modal'>
                   <header>
-                    <button id='$button_close'>Zamknij</button>
+                    <button type='button' id='$button_close'>Zamknij</button>
                     <h1>$plik</h1>
                   </header>
                   <img src='$sciezka_do_pliku' alt='obraz'>
                 </dialog>
-                <button id='$button_open'>Otwórz</button>
+                <button type='button' id='$button_open'>Otwórz</button>
                 <script>
                   document.getElementById('$button_open').onclick = () => $modal.showModal();
                   document.getElementById('$button_close').onclick = ()=>$modal.close();
@@ -71,12 +75,12 @@
                   <header>
                     <p>Na pewno chcesz usunąć plik $plik?</p>
                     <a style='text-decoration: none;' href='http://localhost/php-import/php/strona/dele.php?sciezka_do_pliku=$sciezka_do_pliku'>
-                      <button>Tak</button>
+                      <button type='button'>Tak</button>
                     </a>
-                    <button id='$button_n'>Nie</button>
+                    <button type='button' id='$button_n'>Nie</button>
                   </header>
                 </dialog>
-                <button id='$button_delete'>Usuń</button>
+                <button type='button' id='$button_delete'>Usuń</button>
                 <script>
                   document.getElementById('$button_delete').onclick = () => $delete.showModal();
                   document.getElementById('$button_n').onclick = ()=>$delete.close();
