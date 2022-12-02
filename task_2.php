@@ -11,15 +11,9 @@ class TextInput{
 class NumericInput extends TextInput{
     public function add($text){
         if (is_numeric($text)){
-        $lista=['1','2','3','4','5','6','7','8','9','0'];
-        $elementy=str_split($text);
-        foreach($elementy as $element){
-            if (in_array($element, $lista)){
-                $this->text1.=$element;
+                $this->text1.=$text;
             } 
         }
-    }
-    }
 }
 $input=new NumericInput();
 $input->add('1');
