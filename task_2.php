@@ -10,6 +10,7 @@ class TextInput{
 }
 class NumericInput extends TextInput{
     public function add($text){
+        if (is_numeric($text)){
         $lista=['1','2','3','4','5','6','7','8','9','0'];
         $elementy=str_split($text);
         foreach($elementy as $element){
@@ -18,11 +19,14 @@ class NumericInput extends TextInput{
             } 
         }
     }
+    }
 }
 $input=new NumericInput();
 $input->add('1');
 $input->add('a');
 $input->add('0');
 $input->add('123');
+$input->add('6a1');
+$input->add('99');
 echo $input->getValue();
 ?>
