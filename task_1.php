@@ -1,16 +1,19 @@
 <?php
-$lista_1= array('Ala','Ola','Kot');
-$lista_2= array('Ala','Ada','Kot', 'ola','oLA');
-function unique_names($lista1, $lista2){
-    $check = array_merge($lista1, $lista2);
+$lista_1 = array('ela', 'Ala', 'Oliwia', 'Maria', 'ELa', 'Ela', 'Maria','oliwia', 'Sofia', 'Ela', 'Dorota', 'Maria');
+$lista_2 = array('MaRia','olIwia', 'SofIA', 'Ela', 'DORota','Ala', 'Ela', 'Oliwia', 'Maria', 'Ela', 'Ela', 'Maria', 'DonKEY');
+$lista_3 = array('jakub');
+$lista_4 = array('marian');
+$lista_5 = array('MiKoŁaJ');
+function unique_names($lista){
     $wynik = array();
-    foreach ($check as $element_1){
+    foreach ($lista as $element_1){
         if(!in_array(strtolower($element_1), array_map('strtolower', $wynik))){
-            $wynik[]=$element_1;
+            $wynik[]=ucfirst(mb_strtolower($element_1));
         }
         }
+    sort($wynik);
     return $wynik;
     }
-$names=unique_names($lista_1, $lista_2);
-echo join(', ', $names)
+$names=unique_names(array_merge($lista_1, $lista_2, $lista_3, $lista_4, $lista_5));
+echo join(', ', $names);
 ?>
